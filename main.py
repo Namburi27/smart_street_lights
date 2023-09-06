@@ -26,6 +26,7 @@ count=0
 while True:
     success, img = cap.read()
     results = model(img, stream=True)
+    detected_images = []
     for r in results:
         boxes = r.boxes
         for box in boxes:
@@ -37,15 +38,15 @@ while True:
             print(conf)
             cls = int(box.cls[0])
             cvzone.putTextRect(img, f'{classNames[cls]}{conf}', (max(0, x1), max(35, y1)), scale=1, thickness=1)
-            if classNames[cls] == "person":
-                webbrowser.open(
-                    "https://blr1.blynk.cloud/external/api/update?token=BVxvzArB8bmBxc_onUXuHoNJCandI8Mi&V0=1")
-                file_path="captured_image_{}.jpg".format(count)
-                cv2.imwrite(file_path, img)
-                count+=1
-                time.sleep(30)
+            detected_images.append(classNames[cls])
+    if classNames[0] in detected_images:
         webbrowser.open(
-            "https://blr1.blynk.cloud/external/api/update?token=BVxvzArB8bmBxc_onUXuHoNJCandI8Mi&V0=0")
-        time.sleep(10)
-    cv2.imshow("Image", img)
+            "https://blr1.blynk.cloud/external/api/update?token=BVxvzArB8bmBxc_onUXuHoNJCandI8Mi&V0=1")
+        file_path="captured_image_{}.jpg".format(count)
+        cv2.imwrite(file_path, img)
+        count+=1
+        time.sleep(30)
+    webbrowser.open(
+        "https://blr1.blynk.cloud/external/api/update?token=BVxvzArB8bmBxc_onUXuHoNJCandI8Mi&V0=0")
+    time.sleep(10)
     cv2.waitKey(1)
