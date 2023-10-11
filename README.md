@@ -74,6 +74,7 @@ Remember to refer to the Blynk documentation and community forums for specific i
 
 
 
+![WhatsApp Image 2023-10-10 at 2 04 05 AM](https://github.com/Namburi27/smart_street_lights/assets/93852672/2e191f21-9930-45c4-86af-8cb6829b83af)
 
 
 
