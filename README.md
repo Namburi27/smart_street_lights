@@ -73,8 +73,16 @@ Remember to refer to the Blynk documentation and community forums for specific i
 ![WhatsApp Image 2023-09-22 at 10 20 59 PM](https://github.com/Namburi27/smart_street_lights/assets/93852672/4a442756-1662-4f5b-b729-ecee77314135)
 
 
+**Project UserCase Overview**
+
+
+![image](https://github.com/Namburi27/smart_street_lights/assets/93852672/7662fd06-9994-48a2-adde-46de8cb5b5fb)
+
+
+
 
 ![WhatsApp Image 2023-10-10 at 2 04 05 AM](https://github.com/Namburi27/smart_street_lights/assets/93852672/2e191f21-9930-45c4-86af-8cb6829b83af)
+
 
 
 
